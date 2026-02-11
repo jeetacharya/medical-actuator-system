@@ -16,10 +16,10 @@ The system consists of the following layers:
 
 - Physics-based actuator model
 - Closed-loop PID motion controller
-- Digital twin with parameter mismatch
+- Digital twin model with parameter mismatch
 - Residual-based fault detection
-- Safety state machine (NORMAL / DEGRADED / SHUTDOWN)
-- Automated verification and validation (V&V)
+- Safety state machine (Normal/ Degraded/ Shutdown)
+- Verification and validation (V&V)
 - Software Failure Modes and Effects Analysis (FMEA)
 
 ---
@@ -28,15 +28,15 @@ The system consists of the following layers:
 
 ### Closed-Loop Control
 - Physics-based rotational actuator model
-- PID position control
+- PID based position control
 - Performance metrics: overshoot, settling time, RMS error
 
 ### Digital Twin
-- Parallel nominal model with intentional parameter mismatch
+- Parallel model with parameter mismatch
 - Used as predictive reference for diagnostics
 
 ### Fault Detection & Safety
-- Residual-based fault detection
+- Residual-based fault detection for position and velocity
 - Sensor drift fault injection
 - Safety state transitions:
   - NORMAL: full performance
@@ -57,17 +57,17 @@ The system consists of the following layers:
 
 ## Project Structure
 
-medical_actuator/
-├── models/ # Actuator and digital twin models
-├── control/ # PID controller
-├── diagnostics/ # Fault injection and detection
-├── safety/ # Safety state machine
-├── simulation/ # System integration
-├── verification/ # Automated V&V
-├── risk/ # Software FMEA
-├── results/ # Plots and reports
-└── phase*_main.py # Execution scripts
-
+*   `medical_actuator-system/`
+    *   `models/`: Actuator and digital twin models
+    *   `control/`: PID controller
+    *   `metrics/`: Performance metrics of response
+    *   `diagnostics/`: Fault injection and detection
+    *   `safety/`: Safety state machine
+    *   `simulation/`: System integration
+    *   `verification/`: Automated V&V
+    *   `risk/`: Software FMEA
+    *   `results/`: Plots and reports
+    *   `phase*_main.py`: Execution scripts
 
 ---
 
