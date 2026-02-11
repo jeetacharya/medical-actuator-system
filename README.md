@@ -21,3 +21,63 @@ The system consists of the following layers:
 - Safety state machine (NORMAL / DEGRADED / SHUTDOWN)
 - Automated verification and validation (V&V)
 - Software Failure Modes and Effects Analysis (FMEA)
+
+---
+
+## Key Features
+
+### Closed-Loop Control
+- Physics-based rotational actuator model
+- PID position control
+- Performance metrics: overshoot, settling time, RMS error
+
+### Digital Twin
+- Parallel nominal model with intentional parameter mismatch
+- Used as predictive reference for diagnostics
+
+### Fault Detection & Safety
+- Residual-based fault detection
+- Sensor drift fault injection
+- Safety state transitions:
+  - NORMAL: full performance
+  - DEGRADED: current limiting
+  - SHUTDOWN: motion disabled
+
+### Automated Verification
+- Requirements-based verification
+- Pass/Fail evaluation of performance and safety metrics
+- Fault detection latency measurement
+
+### Risk Analysis
+- Software FMEA generation
+- Risk Priority Number (RPN) calculation
+- Ranked failure modes
+
+---
+
+## Project Structure
+
+medical_actuator/
+├── models/ # Actuator and digital twin models
+├── control/ # PID controller
+├── diagnostics/ # Fault injection and detection
+├── safety/ # Safety state machine
+├── simulation/ # System integration
+├── verification/ # Automated V&V
+├── risk/ # Software FMEA
+├── results/ # Plots and reports
+└── phase*_main.py # Execution scripts
+
+
+---
+
+## Verification Results (Summary)
+
+| Requirement              | Status |
+|--------------------------|--------|
+| Overshoot < 10%          | PASS   |
+| Settling Time < 1.0 s    | PASS   |
+| RMS Error < 17.15 deg    | PASS   |
+| Fault Detection < 200 ms | PASS   |
+
+---
