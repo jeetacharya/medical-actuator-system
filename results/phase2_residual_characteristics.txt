@@ -1,0 +1,4 @@
+Steady state residual mean: -4.1 deg
+Residual RMS: 3.9 deg
+Mean residual: -3.8 deg
+Standard deviation: 0.9 deg

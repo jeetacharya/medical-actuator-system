@@ -1,0 +1,4 @@
+Component,Failure mode,Severity,Occurrence,Detection,RPN
+Position sensor,Drift,8,4,3,96
+Controller,Integral windup,9,2,4,72
+Actuator,Torque loss,7,2,3,42

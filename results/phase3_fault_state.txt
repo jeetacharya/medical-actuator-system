@@ -1,0 +1,8 @@
+Position fault occurs at: 0.45 sec
+Velocity fault occurs at: 0.07 sec
+Detection latency: 0.07 sec
+Degraded state begins at: 0.07 sec
+Shutdown state begins at: 0.34 sec
+Time spent in degraded mode: 0.27 sec
+Fault growth rate: 1 deg/sec
+Time to detection: 0.07 sec
